@@ -90,4 +90,11 @@ $(document).ready(function(){
         $('.modal').removeClass('active');
       });
     });
+    new WOW().init();
+
+    $('.approach__tab').on('click', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.container').find('div.approach__content').removeClass('approach__content_active').eq($(this).index()).addClass('approach__content_active');
+    });
 });
