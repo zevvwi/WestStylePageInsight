@@ -178,4 +178,16 @@ $(document).ready(function(){
         $('body').css('overflowY', 'visible');
       }
     });
+    const footerUl = document.querySelectorAll('.footer__top-list_wrapper ul');
+    footerUl.forEach((item, i) => {
+      footerUl[i].addEventListener("click", function() {
+        if (window.innerWidth <= 1000) {
+          $(footerUl[i]).find('li').toggleClass('active');
+        }
+      });
+    });
+    $('.promo__slider').slick({
+      arrows: false,
+      dots: true,
+    });
 });
